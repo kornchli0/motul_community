@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motul Riders Community</title>
+    <title>#Motuleros Worldwide Riders Community</title>
     <!-- Подключение Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
@@ -19,6 +19,7 @@
             font-family: 'Montserrat', sans-serif;
             font-style: italic;
             font-weight: 900;
+            color: black;
         }
         p, li, label, input, button {
             font-family: 'Montserrat', sans-serif;
@@ -27,7 +28,7 @@
         .banner {
             background: url('/static/banner.jpg') no-repeat center center;
             background-size: cover;
-            color: white;
+            color: black;
             text-align: center;
             padding: 50px 20px;
         }
@@ -44,10 +45,18 @@
         .section h2 {
             margin-bottom: 20px;
         }
-        .whatsapp-link a {
-            color: #25d366;
+        .whatsapp-link .btn-green {
+            background-color: #25d366;
+            color: white;
             font-size: 1.2em;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        .whatsapp-link .btn-green:hover {
+            background-color: #1ebe57;
+            color: white;
         }
         .rules {
             background-color: #f4f4f4;
@@ -55,23 +64,23 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+        .btn-red {
+            background-color: #ff4500;
+            color: white;
+        }
+        .btn-red:hover {
+            background-color: #e63900;
+        }
     </style>
 </head>
 <body>
 
     <!-- Баннер -->
     <div class="banner">
-        <h1>Welcome to Motul Riders Community</h1>
-        <p>Join the best motorcycle community and share your passion with fellow riders!</p>
+        <h1>#Motuleros</h1>
+        <h2>Worldwide Riders Community</h2>
+        <p>Self-financed worldwide platform to unite riders who value time they spend with rider buddies.</p>
         <a href="#register" class="btn btn-danger btn-lg">Join Now</a>
-    </div>
-
-    <!-- О сообществе -->
-    <div class="section bg-light">
-        <div class="container">
-            <h2>About the Community</h2>
-            <p>Motul Riders Community unites motorcycle enthusiasts who value time, safety, and the joy of riding.</p>
-        </div>
     </div>
 
     <!-- Правила сообщества -->
@@ -107,7 +116,7 @@
                     <label for="phone" class="form-label">Phone:</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-red">Register</button>
             </form>
         </div>
     </div>
@@ -117,7 +126,7 @@
         <div class="container">
             <h2>Join Our WhatsApp Group</h2>
             <div class="whatsapp-link">
-                <a href="https://chat.whatsapp.com/HxOu6sVzULfDllfLW1Caka" target="_blank">Click here to join the group</a>
+                <a href="https://chat.whatsapp.com/HxOu6sVzULfDllfLW1Caka" target="_blank" class="btn-green">Click here to join the group</a>
             </div>
         </div>
     </div>
