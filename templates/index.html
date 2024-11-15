@@ -37,14 +37,14 @@
             position: relative;
             z-index: 2;
         }
-        .banner h1, .banner h2, .banner p {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень только для текста баннера */
+        .banner h1, .banner h2 {
+            color: white; /* Белый цвет только для заголовков в баннере */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень */
         }
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
             font-style: italic;
             font-weight: 900;
-            color: black;
         }
         .section h2 {
             color: black; /* Заголовки разделов */
@@ -125,7 +125,8 @@
     <div class="section" id="register">
         <div class="container">
             <h2 class="event-date">Save the Date: December 14, 2024</h2>
-            <h2>Register for the First Ride in Barcelona</h2>
+            <p>Register for the First Ride in Barcelona</p>
+            <h2>Register</h2>
             <form action="/register" method="POST">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name:</label>
@@ -139,7 +140,7 @@
                     <label for="phone" class="form-label">Phone:</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
-                <button type="submit" class="btn btn-dark-red">Register</button>
+                <button type="submit" class="btn btn-dark-red">Register for the First Ride in Barcelona</button>
             </form>
         </div>
     </div>
