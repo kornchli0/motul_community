@@ -45,6 +45,27 @@
         .section h2 {
             margin-bottom: 20px;
         }
+        .btn-dark-red {
+            background-color: #8B0000; /* Темно-красный */
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn-dark-red:hover {
+            background-color: #600000;
+        }
+        .rules {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .event-date {
+            color: #8B0000; /* Темно-красный */
+            font-weight: bold;
+        }
         .whatsapp-link .btn-green {
             background-color: #25d366;
             color: white;
@@ -58,21 +79,6 @@
             background-color: #1ebe57;
             color: white;
         }
-        .rules {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        /* Одинаковый цвет для всех красных кнопок */
-        .btn-red, .btn-danger {
-            background-color: #ff4500;
-            color: white;
-            border: none;
-        }
-        .btn-red:hover, .btn-danger:hover {
-            background-color: #e63900;
-        }
     </style>
 </head>
 <body>
@@ -82,7 +88,7 @@
         <h1>#Motuleros</h1>
         <h2>Worldwide Riders Community</h2>
         <p>Self-financed worldwide platform to unite riders who value time they spend with rider buddies.</p>
-        <a href="#register" class="btn btn-danger btn-lg">Join Now</a>
+        <a href="#register" class="btn btn-dark-red">Join Now</a>
     </div>
 
     <!-- Правила сообщества -->
@@ -101,20 +107,10 @@
         </div>
     </div>
 
-    <!-- Кнопка для вступления в WhatsApp -->
-    <div class="section text-center">
-        <div class="container">
-            <h2>Join Our WhatsApp Group</h2>
-            <div class="whatsapp-link">
-                <a href="https://chat.whatsapp.com/HxOu6sVzULfDllfLW1Caka" target="_blank" class="btn-green">Click here to join the group</a>
-            </div>
-        </div>
-    </div>
-
     <!-- Форма регистрации -->
     <div class="section" id="register">
         <div class="container">
-            <h2>Save the Date: December 14, 2024</h2>
+            <h2 class="event-date">Save the Date: December 14, 2024</h2>
             <p>Register for the First Ride in Barcelona</p>
             <h2>Register</h2>
             <form action="/register" method="POST">
@@ -130,8 +126,18 @@
                     <label for="phone" class="form-label">Phone:</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
-                <button type="submit" class="btn btn-danger">Register</button>
+                <button type="submit" class="btn btn-dark-red">Register for the First Ride in Barcelona</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Кнопка для вступления в WhatsApp -->
+    <div class="section bg-light text-center">
+        <div class="container">
+            <h2>Join Our WhatsApp Group</h2>
+            <div class="whatsapp-link">
+                <a href="https://chat.whatsapp.com/HxOu6sVzULfDllfLW1Caka" target="_blank" class="btn-green">Click here to join the group</a>
+            </div>
         </div>
     </div>
 
