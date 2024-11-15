@@ -1,25 +1,28 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
+import os
 
 app = Flask(__name__)
 
-# Путь к базе данных
-DB_PATH = "data/registrations.db"
+# Путь к базе данных (используем временную директорию для Render)
+DB_PATH = "/tmp/registrations.db"
 
 # Инициализация базы данных
 def init_db():
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    cursor.execute("""
-    CREATE TABLE IF NOT EXISTS registrations (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        email TEXT NOT NULL,
-        phone TEXT NOT NULL
-    )
-    """)
-    conn.commit()
-    conn.close()
+    # Создаём базу данных только если её нет
+    if not os.path.exists(DB_PATH):
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS registrations (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            email TEXT NOT NULL,
+            phone TEXT NOT NULL
+        )
+        """)
+        conn.commit()
+        conn.close()
 
 @app.route("/")
 def index():
@@ -41,4 +44,4 @@ def register():
 
 if __name__ == "__main__":
     init_db()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
