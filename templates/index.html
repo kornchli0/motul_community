@@ -15,30 +15,40 @@
             background-color: #f9f9f9;
             color: #333;
         }
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-style: italic;
-            font-weight: 900;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Добавлена тень */
-        }
-        p, li, label, input, button {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-        }
         .banner {
+            position: relative;
             background: url('/static/banner.jpg') no-repeat center center;
             background-size: cover;
             color: white;
             text-align: center;
             padding: 50px 20px;
         }
-        .banner h1 {
-            font-size: 2.5em;
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Затемнение */
+            z-index: 1;
         }
-        .banner p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+        .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+        .banner h1, .banner h2, .banner p {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень только для текста баннера */
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 900;
+            color: white;
+        }
+        p, li, label, input, button {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
         }
         .section {
             padding: 40px 20px;
@@ -86,10 +96,12 @@
 
     <!-- Баннер -->
     <div class="banner">
-        <h1>#Motuleros</h1>
-        <h2>Worldwide Riders Community</h2>
-        <p>Self-financed worldwide platform to unite riders who value time they spend with rider buddies.</p>
-        <a href="#register" class="btn btn-dark-red">Join Now</a>
+        <div class="banner-content">
+            <h1>#Motuleros</h1>
+            <h2>Worldwide Riders Community</h2>
+            <p>Self-financed worldwide platform to unite riders who value time they spend with rider buddies.</p>
+            <a href="#register" class="btn btn-dark-red">Join Now</a>
+        </div>
     </div>
 
     <!-- Правила сообщества -->
