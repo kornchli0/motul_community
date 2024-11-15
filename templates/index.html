@@ -64,11 +64,13 @@
             border-radius: 5px;
             margin-top: 20px;
         }
-        .btn-red {
+        /* Одинаковый цвет для всех красных кнопок */
+        .btn-red, .btn-danger {
             background-color: #ff4500;
             color: white;
+            border: none;
         }
-        .btn-red:hover {
+        .btn-red:hover, .btn-danger:hover {
             background-color: #e63900;
         }
     </style>
@@ -99,9 +101,21 @@
         </div>
     </div>
 
+    <!-- Кнопка для вступления в WhatsApp -->
+    <div class="section text-center">
+        <div class="container">
+            <h2>Join Our WhatsApp Group</h2>
+            <div class="whatsapp-link">
+                <a href="https://chat.whatsapp.com/HxOu6sVzULfDllfLW1Caka" target="_blank" class="btn-green">Click here to join the group</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Форма регистрации -->
     <div class="section" id="register">
         <div class="container">
+            <h2>Save the Date: December 14, 2024</h2>
+            <p>Register for the First Ride in Barcelona</p>
             <h2>Register</h2>
             <form action="/register" method="POST">
                 <div class="mb-3">
@@ -116,18 +130,8 @@
                     <label for="phone" class="form-label">Phone:</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
-                <button type="submit" class="btn btn-red">Register</button>
+                <button type="submit" class="btn btn-danger">Register</button>
             </form>
-        </div>
-    </div>
-
-    <!-- Кнопка для вступления в WhatsApp -->
-    <div class="section bg-light text-center">
-        <div class="container">
-            <h2>Join Our WhatsApp Group</h2>
-            <div class="whatsapp-link">
-                <a href="https://chat.whatsapp.com/HxOu6sVzULfDllfLW1Caka" target="_blank" class="btn-green">Click here to join the group</a>
-            </div>
         </div>
     </div>
 
